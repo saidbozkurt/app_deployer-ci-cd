@@ -48,6 +48,13 @@ jobs:
           git checkout ${{ env.app_version }}
           ls -l
 
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: "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"
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
 
 
       # Runs a set of commands using the runners shell
