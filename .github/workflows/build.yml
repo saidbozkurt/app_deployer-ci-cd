@@ -57,7 +57,7 @@ jobs:
           projectBaseDir: .
           args: >
             -Dsonar.organization=saidbozkurt
-            -Dsonar.projectKey=artemis-scan
+            -Dsonar.projectKey=artemis-scanbozkurt
             -Dsonar.verbose=true
 
 
