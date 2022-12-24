@@ -51,8 +51,14 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: "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"
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: sonarcloud.io
+        with:
+          projectBaseDir: .
+          args: >
+            -Dsonar.organization=saidbozkurt
+            -Dsonar.projectKey=artemis-scan
+            -Dsonar.verbose=true
 
 
 
